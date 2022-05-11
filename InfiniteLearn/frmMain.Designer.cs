@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.grpUser = new System.Windows.Forms.GroupBox();
-            this.btnLoginMain = new System.Windows.Forms.Button();
             this.btnRegisterMain = new System.Windows.Forms.Button();
+            this.btnLoginMain = new System.Windows.Forms.Button();
             this.grpLevel = new System.Windows.Forms.GroupBox();
-            this.rdoBeginner = new System.Windows.Forms.RadioButton();
-            this.rdoIntermediate = new System.Windows.Forms.RadioButton();
             this.rdoAdvanced = new System.Windows.Forms.RadioButton();
+            this.rdoIntermediate = new System.Windows.Forms.RadioButton();
+            this.rdoBeginner = new System.Windows.Forms.RadioButton();
             this.grpCategory = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lstCategory = new System.Windows.Forms.ListBox();
             this.lstAvailable = new System.Windows.Forms.ListBox();
+            this.lstCategory = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnEnroll = new System.Windows.Forms.Button();
             this.grpUser.SuspendLayout();
             this.grpLevel.SuspendLayout();
@@ -58,16 +58,6 @@
             this.grpUser.TabStop = false;
             this.grpUser.Text = "Unregistered User";
             // 
-            // btnLoginMain
-            // 
-            this.btnLoginMain.Location = new System.Drawing.Point(17, 40);
-            this.btnLoginMain.Name = "btnLoginMain";
-            this.btnLoginMain.Size = new System.Drawing.Size(109, 33);
-            this.btnLoginMain.TabIndex = 0;
-            this.btnLoginMain.Text = "Login";
-            this.btnLoginMain.UseVisualStyleBackColor = true;
-            this.btnLoginMain.Click += new System.EventHandler(this.btnLoginMain_Click);
-            // 
             // btnRegisterMain
             // 
             this.btnRegisterMain.Location = new System.Drawing.Point(139, 40);
@@ -77,6 +67,16 @@
             this.btnRegisterMain.Text = "Register";
             this.btnRegisterMain.UseVisualStyleBackColor = true;
             this.btnRegisterMain.Click += new System.EventHandler(this.btnRegisterMain_Click);
+            // 
+            // btnLoginMain
+            // 
+            this.btnLoginMain.Location = new System.Drawing.Point(17, 40);
+            this.btnLoginMain.Name = "btnLoginMain";
+            this.btnLoginMain.Size = new System.Drawing.Size(109, 33);
+            this.btnLoginMain.TabIndex = 0;
+            this.btnLoginMain.Text = "Login";
+            this.btnLoginMain.UseVisualStyleBackColor = true;
+            this.btnLoginMain.Click += new System.EventHandler(this.btnLoginMain_Click);
             // 
             // grpLevel
             // 
@@ -91,16 +91,17 @@
             this.grpLevel.TabStop = false;
             this.grpLevel.Text = "Level";
             // 
-            // rdoBeginner
+            // rdoAdvanced
             // 
-            this.rdoBeginner.AutoSize = true;
-            this.rdoBeginner.Location = new System.Drawing.Point(22, 39);
-            this.rdoBeginner.Name = "rdoBeginner";
-            this.rdoBeginner.Size = new System.Drawing.Size(97, 24);
-            this.rdoBeginner.TabIndex = 0;
-            this.rdoBeginner.TabStop = true;
-            this.rdoBeginner.Text = "Beginner";
-            this.rdoBeginner.UseVisualStyleBackColor = true;
+            this.rdoAdvanced.AutoSize = true;
+            this.rdoAdvanced.Location = new System.Drawing.Point(262, 39);
+            this.rdoAdvanced.Name = "rdoAdvanced";
+            this.rdoAdvanced.Size = new System.Drawing.Size(103, 24);
+            this.rdoAdvanced.TabIndex = 2;
+            this.rdoAdvanced.TabStop = true;
+            this.rdoAdvanced.Text = "Advanced";
+            this.rdoAdvanced.UseVisualStyleBackColor = true;
+            this.rdoAdvanced.CheckedChanged += new System.EventHandler(this.rdoAdvanced_CheckedChanged);
             // 
             // rdoIntermediate
             // 
@@ -112,17 +113,19 @@
             this.rdoIntermediate.TabStop = true;
             this.rdoIntermediate.Text = "Intermediate";
             this.rdoIntermediate.UseVisualStyleBackColor = true;
+            this.rdoIntermediate.CheckedChanged += new System.EventHandler(this.rdoIntermediate_CheckedChanged);
             // 
-            // rdoAdvanced
+            // rdoBeginner
             // 
-            this.rdoAdvanced.AutoSize = true;
-            this.rdoAdvanced.Location = new System.Drawing.Point(262, 39);
-            this.rdoAdvanced.Name = "rdoAdvanced";
-            this.rdoAdvanced.Size = new System.Drawing.Size(103, 24);
-            this.rdoAdvanced.TabIndex = 2;
-            this.rdoAdvanced.TabStop = true;
-            this.rdoAdvanced.Text = "Advanced";
-            this.rdoAdvanced.UseVisualStyleBackColor = true;
+            this.rdoBeginner.AutoSize = true;
+            this.rdoBeginner.Location = new System.Drawing.Point(22, 39);
+            this.rdoBeginner.Name = "rdoBeginner";
+            this.rdoBeginner.Size = new System.Drawing.Size(97, 24);
+            this.rdoBeginner.TabIndex = 0;
+            this.rdoBeginner.TabStop = true;
+            this.rdoBeginner.Text = "Beginner";
+            this.rdoBeginner.UseVisualStyleBackColor = true;
+            this.rdoBeginner.CheckedChanged += new System.EventHandler(this.rdoBeginner_CheckedChanged);
             // 
             // grpCategory
             // 
@@ -138,23 +141,14 @@
             this.grpCategory.TabStop = false;
             this.grpCategory.Text = "Courses";
             // 
-            // label1
+            // lstAvailable
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Category";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(218, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Available Courses";
+            this.lstAvailable.FormattingEnabled = true;
+            this.lstAvailable.ItemHeight = 20;
+            this.lstAvailable.Location = new System.Drawing.Point(222, 73);
+            this.lstAvailable.Name = "lstAvailable";
+            this.lstAvailable.Size = new System.Drawing.Size(410, 184);
+            this.lstAvailable.TabIndex = 3;
             // 
             // lstCategory
             // 
@@ -165,14 +159,23 @@
             this.lstCategory.Size = new System.Drawing.Size(180, 184);
             this.lstCategory.TabIndex = 2;
             // 
-            // lstAvailable
+            // label2
             // 
-            this.lstAvailable.FormattingEnabled = true;
-            this.lstAvailable.ItemHeight = 20;
-            this.lstAvailable.Location = new System.Drawing.Point(222, 73);
-            this.lstAvailable.Name = "lstAvailable";
-            this.lstAvailable.Size = new System.Drawing.Size(410, 184);
-            this.lstAvailable.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(218, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Available Courses";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Category";
             // 
             // btnEnroll
             // 

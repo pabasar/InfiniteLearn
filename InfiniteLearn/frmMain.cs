@@ -17,23 +17,48 @@ namespace InfiniteLearn
             InitializeComponent();
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
+        public void frmMain_Load(object sender, EventArgs e)
         {
-            DisableAll();
+            string name = frmRegister.name;
+            string email = frmRegister.email;
+            string password = frmRegister.password;
+            string eduLevel = frmRegister.eduLevel;
 
-            
+            if(name=="" && email=="" && password=="" && eduLevel=="")
+            {
+                DisableAll();
+            }
+            else
+            {
+                btnLoginMain.Text = "Logout";
+                btnRegisterMain.Enabled = false;
+                EnableAll();
+
+                rdoBeginner.Checked = true;
+                grpUser.Text = "Welcome "+name;
+            }
         }
 
         private void btnLoginMain_Click(object sender, EventArgs e)
         {
-            frmLogin logFormMain = new frmLogin();
-            logFormMain.Show();
+            if(btnLoginMain.Text == "Logout")
+            {
+                DisableAll();
+                btnLoginMain.Text = "Login";
+            }
+            else
+            {
+                frmLogin logFormMain = new frmLogin();
+                logFormMain.Show();
+            }
+            
         }
 
         private void btnRegisterMain_Click(object sender, EventArgs e)
         {
             frmRegister regFormMain = new frmRegister();
             regFormMain.Show();
+            Hide();
         }
 
         public void DisableAll()
@@ -48,6 +73,21 @@ namespace InfiniteLearn
             grpLevel.Enabled = true;
             grpCategory.Enabled = true;
             btnEnroll.Enabled = true;
+        }
+
+        private void rdoBeginner_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoIntermediate_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoAdvanced_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -17,10 +17,10 @@ namespace InfiniteLearn
             InitializeComponent();
         }
 
-        string name = "";
-        string email = "";
-        string password = "";
-        string eduLevel = "";
+        public static string name = "";
+        public static string email = "";
+        public static string password = "";
+        public static string eduLevel = "";
 
         private void btnCancelReg_Click(object sender, EventArgs e)
         {
@@ -83,7 +83,8 @@ namespace InfiniteLearn
                 password = txtPassReg.Text;
                 eduLevel = cmbEduReg.SelectedItem.ToString();
 
-                formMainReg.EnableAll();
+                formMainReg.Show();
+                Close();
             }
             else
             {
@@ -94,6 +95,8 @@ namespace InfiniteLearn
 
         private void frmRegister_Load(object sender, EventArgs e)
         {
+            txtNameReg.Focus();
+
             cmbEduReg.Items.Add("Undergraduate Student");
             cmbEduReg.Items.Add("Graduate Student");
             cmbEduReg.Items.Add("Non Student");
