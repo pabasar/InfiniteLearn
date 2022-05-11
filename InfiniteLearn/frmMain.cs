@@ -22,6 +22,16 @@ namespace InfiniteLearn
 
         }
 
+        private void btnLoginMain_Click(object sender, EventArgs e)
+        {
+            frmLogin logFormMain = new frmLogin();
+            logFormMain.Show();
+        }
 
+        private void btnRegisterMain_Click(object sender, EventArgs e)
+        {
+            frmRegister regFormMain = new frmRegister();
+            regFormMain.Show();
+        }
     }
 }

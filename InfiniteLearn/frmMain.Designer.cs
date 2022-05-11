@@ -66,6 +66,7 @@
             this.btnLoginMain.TabIndex = 0;
             this.btnLoginMain.Text = "Login";
             this.btnLoginMain.UseVisualStyleBackColor = true;
+            this.btnLoginMain.Click += new System.EventHandler(this.btnLoginMain_Click);
             // 
             // btnRegisterMain
             // 
@@ -75,6 +76,7 @@
             this.btnRegisterMain.TabIndex = 1;
             this.btnRegisterMain.Text = "Register";
             this.btnRegisterMain.UseVisualStyleBackColor = true;
+            this.btnRegisterMain.Click += new System.EventHandler(this.btnRegisterMain_Click);
             // 
             // groupBox2
             // 
@@ -186,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 529);
+            this.ClientSize = new System.Drawing.Size(676, 475);
             this.Controls.Add(this.btnEnroll);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
