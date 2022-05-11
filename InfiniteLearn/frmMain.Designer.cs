@@ -158,6 +158,7 @@
             this.lstCategory.Name = "lstCategory";
             this.lstCategory.Size = new System.Drawing.Size(180, 184);
             this.lstCategory.TabIndex = 2;
+            this.lstCategory.SelectedIndexChanged += new System.EventHandler(this.lstCategory_SelectedIndexChanged);
             // 
             // label2
             // 

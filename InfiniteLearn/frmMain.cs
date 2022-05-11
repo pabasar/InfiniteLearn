@@ -17,6 +17,8 @@ namespace InfiniteLearn
             InitializeComponent();
         }
 
+        string level = "";
+
         public void frmMain_Load(object sender, EventArgs e)
         {
             string name = frmRegister.name;
@@ -27,6 +29,7 @@ namespace InfiniteLearn
             if(name=="" && email=="" && password=="" && eduLevel=="")
             {
                 DisableAll();
+                btnLoginMain.Enabled = false;
             }
             else
             {
@@ -35,7 +38,11 @@ namespace InfiniteLearn
                 EnableAll();
 
                 rdoBeginner.Checked = true;
-                grpUser.Text = "Welcome "+name;
+                grpUser.Text = "Hello "+name;
+
+                lstCategory.Items.Add("Programming");
+                lstCategory.Items.Add("Data Science");
+                lstCategory.Items.Add("Software");
             }
         }
 
@@ -78,17 +85,61 @@ namespace InfiniteLearn
 
         private void rdoBeginner_CheckedChanged(object sender, EventArgs e)
         {
-
+            level = rdoBeginner.Text;
         }
 
         private void rdoIntermediate_CheckedChanged(object sender, EventArgs e)
         {
-
+            level = rdoIntermediate.Text;
         }
 
         private void rdoAdvanced_CheckedChanged(object sender, EventArgs e)
         {
+            level = rdoAdvanced.Text;
+        }
 
+        private void lstCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstAvailable.Items.Clear();
+            if(lstCategory.SelectedItem.ToString()== "Programming")
+            {
+                lstAvailable.Items.Add("C++ " + level + " Training");
+                lstAvailable.Items.Add("Python " + level + " Training");
+                lstAvailable.Items.Add("Scala " + level + " Training");
+                lstAvailable.Items.Add("Ruby " + level + " Training");
+                lstAvailable.Items.Add("Dart " + level + " Training");
+                lstAvailable.Items.Add("Java " + level + " Training");
+                lstAvailable.Items.Add("PHP " + level + " Training");
+                lstAvailable.Items.Add("C# " + level + " Training");
+                lstAvailable.Items.Add("Visual Basic " + level + " Training");
+                lstAvailable.Items.Add("Groovy " + level + " Training");
+            }
+            else if (lstCategory.SelectedItem.ToString() == "Data Science")
+            {
+                lstAvailable.Items.Add("Machine Learning " + level + " Training");
+                lstAvailable.Items.Add("Statistical Analysis " + level + " Training");
+                lstAvailable.Items.Add("Data Engineering " + level + " Training");
+                lstAvailable.Items.Add("Data Visualization " + level + " Training");
+                lstAvailable.Items.Add("Data Mining " + level + " Training");
+                lstAvailable.Items.Add("Pattern Recognition " + level + " Training");
+                lstAvailable.Items.Add("Marketing Data Analysis " + level + " Training");
+                lstAvailable.Items.Add("Intelligent Systems " + level + " Training");
+                lstAvailable.Items.Add("Knowledge Based Systems " + level + " Training");
+                lstAvailable.Items.Add("Artificial Intelligence " + level + " Training");
+            }
+            if (lstCategory.SelectedItem.ToString() == "Software")
+            {
+                lstAvailable.Items.Add("Microsoft Word " + level + " Training");
+                lstAvailable.Items.Add("Microsoft Excel " + level + " Training");
+                lstAvailable.Items.Add("Microsoft Powerpoint " + level + " Training");
+                lstAvailable.Items.Add("Corel Draw " + level + " Training");
+                lstAvailable.Items.Add("Windows Movie Maker " + level + " Training");
+                lstAvailable.Items.Add("Photoshop " + level + " Training");
+                lstAvailable.Items.Add("Cubase " + level + " Training");
+                lstAvailable.Items.Add("Windows 11 " + level + " Training");
+                lstAvailable.Items.Add("Ubuntu " + level + " Training");
+                lstAvailable.Items.Add("Sketchup " + level + " Training");
+            }
         }
     }
 }
