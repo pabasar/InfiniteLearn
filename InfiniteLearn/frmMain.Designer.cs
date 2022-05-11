@@ -188,6 +188,7 @@
             this.btnEnroll.TabIndex = 3;
             this.btnEnroll.Text = "Enroll Now";
             this.btnEnroll.UseVisualStyleBackColor = true;
+            this.btnEnroll.Click += new System.EventHandler(this.btnEnroll_Click);
             // 
             // frmMain
             // 
@@ -199,6 +200,7 @@
             this.Controls.Add(this.grpLevel);
             this.Controls.Add(this.grpUser);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Infinite Learn";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.grpUser.ResumeLayout(false);

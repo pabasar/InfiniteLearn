@@ -19,12 +19,16 @@ namespace InfiniteLearn
 
         string level = "";
 
+        string name, email, password, eduLevel;
+
+        public static string displayText = "";
+
         public void frmMain_Load(object sender, EventArgs e)
         {
-            string name = frmRegister.name;
-            string email = frmRegister.email;
-            string password = frmRegister.password;
-            string eduLevel = frmRegister.eduLevel;
+            name = frmRegister.name;
+            email = frmRegister.email;
+            password = frmRegister.password;
+            eduLevel = frmRegister.eduLevel;
 
             if(name=="" && email=="" && password=="" && eduLevel=="")
             {
@@ -140,6 +144,41 @@ namespace InfiniteLearn
                 lstAvailable.Items.Add("Ubuntu " + level + " Training");
                 lstAvailable.Items.Add("Sketchup " + level + " Training");
             }
+        }
+
+        private void btnEnroll_Click(object sender, EventArgs e)
+        {
+            int courseCost = 5000;
+            int multCost = courseCost*lstAvailable.SelectedItems.Count;
+            int discount = 0;
+            double finalCost = 0;
+
+            if(eduLevel=="Undergraduate Student")
+            {
+                discount = 40;
+            }
+            else if(eduLevel=="Graduate Student")
+            {
+                discount = 20;
+            }
+
+            finalCost = multCost * (100 - discount) / 100;
+            string msg = "Cost is " + finalCost.ToString() + " LKR. Want to Proceed?";
+
+            MessageBox.Show(msg, "Checkout", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            displayText += "Dear " + name;
+            displayText += "\n\nYou are now enrolled in following courses:";
+
+            for(int i=0;i<lstAvailable.SelectedItems.Count;i++)
+            {
+                displayText += "\n" + lstAvailable.SelectedItems[i].ToString();
+            }
+
+            displayText += "\n\n" + finalCost.ToString() + " LKR has been charged.";
+
+            frmDisplay displayForm = new frmDisplay();
+            displayForm.Show();
         }
     }
 }
