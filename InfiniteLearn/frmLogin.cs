@@ -28,5 +28,25 @@ namespace InfiniteLearn
             formRegLog.Show();
             Close();
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            frmMain formMainLog = new frmMain();
+
+            if(txtEmailLog.Text == frmRegister.email && txtPassLog.Text == frmRegister.password)
+            {
+                formMainLog.Show();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Wrong Email or Password!", "Try again", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -50,6 +50,7 @@ namespace InfiniteLearn
             {
                 frmLogin logFormMain = new frmLogin();
                 logFormMain.Show();
+                Hide();
             }
             
         }
