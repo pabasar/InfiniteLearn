@@ -20,6 +20,8 @@ namespace InfiniteLearn
         private void frmMain_Load(object sender, EventArgs e)
         {
             DisableAll();
+
+            
         }
 
         private void btnLoginMain_Click(object sender, EventArgs e)
@@ -34,14 +36,14 @@ namespace InfiniteLearn
             regFormMain.Show();
         }
 
-        void DisableAll()
+        public void DisableAll()
         {
             grpLevel.Enabled = false;
             grpCategory.Enabled = false;
             btnEnroll.Enabled = false;
         }
 
-        void EnableAll()
+        public void EnableAll()
         {
             grpLevel.Enabled = true;
             grpCategory.Enabled = true;
