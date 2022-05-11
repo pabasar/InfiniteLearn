@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpUser = new System.Windows.Forms.GroupBox();
             this.btnLoginMain = new System.Windows.Forms.Button();
             this.btnRegisterMain = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grpLevel = new System.Windows.Forms.GroupBox();
             this.rdoBeginner = new System.Windows.Forms.RadioButton();
             this.rdoIntermediate = new System.Windows.Forms.RadioButton();
             this.rdoAdvanced = new System.Windows.Forms.RadioButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grpCategory = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lstCategory = new System.Windows.Forms.ListBox();
             this.lstAvailable = new System.Windows.Forms.ListBox();
             this.btnEnroll = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.grpUser.SuspendLayout();
+            this.grpLevel.SuspendLayout();
+            this.grpCategory.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grpUser
             // 
-            this.groupBox1.Controls.Add(this.btnRegisterMain);
-            this.groupBox1.Controls.Add(this.btnLoginMain);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(397, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(267, 100);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Unregistered User";
+            this.grpUser.Controls.Add(this.btnRegisterMain);
+            this.grpUser.Controls.Add(this.btnLoginMain);
+            this.grpUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpUser.Location = new System.Drawing.Point(397, 12);
+            this.grpUser.Name = "grpUser";
+            this.grpUser.Size = new System.Drawing.Size(267, 100);
+            this.grpUser.TabIndex = 0;
+            this.grpUser.TabStop = false;
+            this.grpUser.Text = "Unregistered User";
             // 
             // btnLoginMain
             // 
@@ -78,18 +78,18 @@
             this.btnRegisterMain.UseVisualStyleBackColor = true;
             this.btnRegisterMain.Click += new System.EventHandler(this.btnRegisterMain_Click);
             // 
-            // groupBox2
+            // grpLevel
             // 
-            this.groupBox2.Controls.Add(this.rdoAdvanced);
-            this.groupBox2.Controls.Add(this.rdoIntermediate);
-            this.groupBox2.Controls.Add(this.rdoBeginner);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(13, 13);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(378, 100);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Level";
+            this.grpLevel.Controls.Add(this.rdoAdvanced);
+            this.grpLevel.Controls.Add(this.rdoIntermediate);
+            this.grpLevel.Controls.Add(this.rdoBeginner);
+            this.grpLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpLevel.Location = new System.Drawing.Point(13, 13);
+            this.grpLevel.Name = "grpLevel";
+            this.grpLevel.Size = new System.Drawing.Size(378, 100);
+            this.grpLevel.TabIndex = 1;
+            this.grpLevel.TabStop = false;
+            this.grpLevel.Text = "Level";
             // 
             // rdoBeginner
             // 
@@ -124,19 +124,19 @@
             this.rdoAdvanced.Text = "Advanced";
             this.rdoAdvanced.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // grpCategory
             // 
-            this.groupBox3.Controls.Add(this.lstAvailable);
-            this.groupBox3.Controls.Add(this.lstCategory);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(13, 120);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(651, 280);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Courses";
+            this.grpCategory.Controls.Add(this.lstAvailable);
+            this.grpCategory.Controls.Add(this.lstCategory);
+            this.grpCategory.Controls.Add(this.label2);
+            this.grpCategory.Controls.Add(this.label1);
+            this.grpCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpCategory.Location = new System.Drawing.Point(13, 120);
+            this.grpCategory.Name = "grpCategory";
+            this.grpCategory.Size = new System.Drawing.Size(651, 280);
+            this.grpCategory.TabIndex = 2;
+            this.grpCategory.TabStop = false;
+            this.grpCategory.Text = "Courses";
             // 
             // label1
             // 
@@ -190,31 +190,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 475);
             this.Controls.Add(this.btnEnroll);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpCategory);
+            this.Controls.Add(this.grpLevel);
+            this.Controls.Add(this.grpUser);
             this.Name = "frmMain";
             this.Text = "Infinite Learn";
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.grpUser.ResumeLayout(false);
+            this.grpLevel.ResumeLayout(false);
+            this.grpLevel.PerformLayout();
+            this.grpCategory.ResumeLayout(false);
+            this.grpCategory.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpUser;
         private System.Windows.Forms.Button btnRegisterMain;
         private System.Windows.Forms.Button btnLoginMain;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpLevel;
         private System.Windows.Forms.RadioButton rdoAdvanced;
         private System.Windows.Forms.RadioButton rdoIntermediate;
         private System.Windows.Forms.RadioButton rdoBeginner;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox grpCategory;
         private System.Windows.Forms.ListBox lstAvailable;
         private System.Windows.Forms.ListBox lstCategory;
         private System.Windows.Forms.Label label2;

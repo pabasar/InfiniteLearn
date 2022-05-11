@@ -28,5 +28,30 @@ namespace InfiniteLearn
             formLogReg.Show();
             Close();
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            string errors = "";
+            int emailValid = 0;
+
+            if(txtPassReg.Text!=txtConfReg.Text)
+            {
+                errors += "Password does not match!";
+            }
+
+            for(int i=0;i<txtEmailReg.TextLength;i++)
+            {
+                if(txtEmailReg.Text[i]=='@')
+                {
+                    emailValid = 1;
+                }
+            }
+        }
+
+        private void frmRegister_Load(object sender, EventArgs e)
+        {
+            cmbEduReg.Items.Add("Undergraduate Student");
+            cmbEduReg.Items.Add("Graduate Student");
+        }
     }
 }

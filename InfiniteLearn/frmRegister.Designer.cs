@@ -116,6 +116,7 @@
             this.txtPassReg.Name = "txtPassReg";
             this.txtPassReg.Size = new System.Drawing.Size(332, 27);
             this.txtPassReg.TabIndex = 7;
+            this.txtPassReg.UseSystemPasswordChar = true;
             // 
             // txtConfReg
             // 
@@ -124,6 +125,7 @@
             this.txtConfReg.Name = "txtConfReg";
             this.txtConfReg.Size = new System.Drawing.Size(332, 27);
             this.txtConfReg.TabIndex = 8;
+            this.txtConfReg.UseSystemPasswordChar = true;
             // 
             // cmbEduReg
             // 
@@ -143,6 +145,7 @@
             this.btnRegister.TabIndex = 10;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnCancelReg
             // 
@@ -187,6 +190,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmRegister";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.frmRegister_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

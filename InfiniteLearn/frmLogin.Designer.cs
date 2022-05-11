@@ -65,6 +65,7 @@
             this.txtPassLog.Name = "txtPassLog";
             this.txtPassLog.Size = new System.Drawing.Size(332, 27);
             this.txtPassLog.TabIndex = 19;
+            this.txtPassLog.UseSystemPasswordChar = true;
             // 
             // txtEmailLog
             // 
