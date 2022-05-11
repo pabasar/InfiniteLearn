@@ -100,6 +100,7 @@ namespace InfiniteLearn
             cmbEduReg.Items.Add("Undergraduate Student");
             cmbEduReg.Items.Add("Graduate Student");
             cmbEduReg.Items.Add("Non Student");
+            cmbEduReg.SelectedIndex = 0;
         }
     }
 }

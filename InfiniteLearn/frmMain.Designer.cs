@@ -147,6 +147,7 @@
             this.lstAvailable.ItemHeight = 20;
             this.lstAvailable.Location = new System.Drawing.Point(222, 73);
             this.lstAvailable.Name = "lstAvailable";
+            this.lstAvailable.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lstAvailable.Size = new System.Drawing.Size(410, 184);
             this.lstAvailable.TabIndex = 3;
             // 
