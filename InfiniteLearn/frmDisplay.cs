@@ -20,7 +20,8 @@ namespace InfiniteLearn
         private void frmDisplay_Load(object sender, EventArgs e)
         {
             txtDisplay.Text = "";
-            string display = frmMain.displayText;
+            string display = "";
+            display = frmMain.displayText;
             txtDisplay.Text = display;
         }
 

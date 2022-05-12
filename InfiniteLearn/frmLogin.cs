@@ -38,7 +38,10 @@ namespace InfiniteLearn
         {
             frmMain formMainLog = new frmMain();
 
-            if(txtEmailLog.Text == frmRegister.email && txtPassLog.Text == frmRegister.password)
+            string email = frmRegister.email;
+            string password = frmRegister.password;
+
+            if (txtEmailLog.Text == email && txtPassLog.Text == password)
             {
                 formMainLog.Show();
                 Close();
