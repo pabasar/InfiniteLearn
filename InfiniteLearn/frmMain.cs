@@ -222,8 +222,7 @@ namespace InfiniteLearn
             {
                 frmDisplay displayForm = new frmDisplay();
                 displayForm.Show();
-            }
-            
+            }       
         }
     }
 }
