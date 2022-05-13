@@ -41,9 +41,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEnroll = new System.Windows.Forms.Button();
+            this.grpAdditional = new System.Windows.Forms.GroupBox();
+            this.chkSelf = new System.Windows.Forms.CheckBox();
+            this.chkQuick = new System.Windows.Forms.CheckBox();
             this.grpUser.SuspendLayout();
             this.grpLevel.SuspendLayout();
             this.grpCategory.SuspendLayout();
+            this.grpAdditional.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpUser
@@ -182,7 +186,7 @@
             // btnEnroll
             // 
             this.btnEnroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnroll.Location = new System.Drawing.Point(262, 416);
+            this.btnEnroll.Location = new System.Drawing.Point(261, 513);
             this.btnEnroll.Name = "btnEnroll";
             this.btnEnroll.Size = new System.Drawing.Size(151, 36);
             this.btnEnroll.TabIndex = 3;
@@ -190,11 +194,44 @@
             this.btnEnroll.UseVisualStyleBackColor = true;
             this.btnEnroll.Click += new System.EventHandler(this.btnEnroll_Click);
             // 
+            // grpAdditional
+            // 
+            this.grpAdditional.Controls.Add(this.chkQuick);
+            this.grpAdditional.Controls.Add(this.chkSelf);
+            this.grpAdditional.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpAdditional.Location = new System.Drawing.Point(13, 407);
+            this.grpAdditional.Name = "grpAdditional";
+            this.grpAdditional.Size = new System.Drawing.Size(651, 90);
+            this.grpAdditional.TabIndex = 4;
+            this.grpAdditional.TabStop = false;
+            this.grpAdditional.Text = "Additional Materials";
+            // 
+            // chkSelf
+            // 
+            this.chkSelf.AutoSize = true;
+            this.chkSelf.Location = new System.Drawing.Point(207, 38);
+            this.chkSelf.Name = "chkSelf";
+            this.chkSelf.Size = new System.Drawing.Size(187, 24);
+            this.chkSelf.TabIndex = 0;
+            this.chkSelf.Text = "Self Learning Bundle";
+            this.chkSelf.UseVisualStyleBackColor = true;
+            // 
+            // chkQuick
+            // 
+            this.chkQuick.AutoSize = true;
+            this.chkQuick.Location = new System.Drawing.Point(26, 38);
+            this.chkQuick.Name = "chkQuick";
+            this.chkQuick.Size = new System.Drawing.Size(123, 24);
+            this.chkQuick.TabIndex = 1;
+            this.chkQuick.Text = "Quick Guide";
+            this.chkQuick.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 475);
+            this.ClientSize = new System.Drawing.Size(676, 568);
+            this.Controls.Add(this.grpAdditional);
             this.Controls.Add(this.btnEnroll);
             this.Controls.Add(this.grpCategory);
             this.Controls.Add(this.grpLevel);
@@ -208,6 +245,8 @@
             this.grpLevel.PerformLayout();
             this.grpCategory.ResumeLayout(false);
             this.grpCategory.PerformLayout();
+            this.grpAdditional.ResumeLayout(false);
+            this.grpAdditional.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -227,6 +266,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEnroll;
+        private System.Windows.Forms.GroupBox grpAdditional;
+        private System.Windows.Forms.CheckBox chkQuick;
+        private System.Windows.Forms.CheckBox chkSelf;
     }
 }
 

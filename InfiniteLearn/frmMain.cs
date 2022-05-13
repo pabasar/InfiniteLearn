@@ -17,6 +17,8 @@ namespace InfiniteLearn
             InitializeComponent();
         }
 
+        CheckBox[] additional = new CheckBox[2];
+
         string level = "";
 
         string name, email, password, eduLevel;
@@ -25,6 +27,9 @@ namespace InfiniteLearn
 
         public void frmMain_Load(object sender, EventArgs e)
         {
+            additional[0] = chkQuick;
+            additional[1] = chkSelf;
+
             name = frmRegister.name;
             email = frmRegister.email;
             password = frmRegister.password;
@@ -79,6 +84,7 @@ namespace InfiniteLearn
         {
             grpLevel.Enabled = false;
             grpCategory.Enabled = false;
+            grpAdditional.Enabled = false;
             btnEnroll.Enabled = false;
         }
 
@@ -86,6 +92,7 @@ namespace InfiniteLearn
         {
             grpLevel.Enabled = true;
             grpCategory.Enabled = true;
+            grpAdditional.Enabled = true;
             btnEnroll.Enabled = true;
         }
 
@@ -202,7 +209,20 @@ namespace InfiniteLearn
                 discount = 20;
             }
 
+            string additionalMaterials = "";
+            int addi = 0;
+
+            for (int i = 0; i < additional.Length; i++)
+            {
+                if (additional[i].Checked)
+                {
+                    additionalMaterials += "\n" + additional[i].Text;
+                    addi += 100;
+                }
+            }
+
             finalCost = multCost * (100 - discount) / 100;
+            finalCost += addi;
             string msg = "Cost is " + finalCost.ToString() + " LKR. Want to Proceed?";
 
             displayText = "";
@@ -212,6 +232,11 @@ namespace InfiniteLearn
             for(int i=0;i<lstAvailable.SelectedItems.Count;i++)
             {
                 displayText += "\n" + lstAvailable.SelectedItems[i].ToString();
+            }
+
+            if(additionalMaterials!="")
+            {
+                displayText += "\n\nIncluded Additional Materials:" + additionalMaterials;
             }
 
             displayText += "\n\n" + finalCost.ToString() + " LKR has been charged.";
